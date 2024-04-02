@@ -31,22 +31,27 @@ button {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     width: 100%;
-  }
-
-  .cardBack {
+    transition: transform 0.5s ease;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     background-color: #ebf4ff;
-    transform: rotateY(180deg);
+  }
+  .cardBack {
+    transform: perspective(1000px) rotateY(180deg);
   }
 
   .cardBack.flipped {
-    transform: rotateY(0deg);
+    transform: perspective(1000px) rotateY(0deg);
   }
 
   .cardFront {
-    transform: rotateY(0deg);
+    transform: perspective(1000px) rotateY(0deg);
   }
 
   .cardFront.flipped {
-    transform: rotateY(180deg);
+    transform: perspective(1000px) rotateY(-180deg);
   }
+
+
 
