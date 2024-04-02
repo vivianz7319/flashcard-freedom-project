@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Parcel Sandbox</title>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-
-<body>
-  <div class="container">
-    <button type="button" id="flip-btn">
-      Flip Card
-    </button>
-    <div class="card">
-      <div id="back" class="cardBack">Back</div>
-      <div id="front" class="cardFront">Front</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Card Flip</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" id="flip-btn">Flip Card</button>
+      <div class="card">
+        <div id="back" class="cardBack">Back</div>
+        <div id="front" class="cardFront">Front</div>
+      </div>
     </div>
-  </div>
-
-  <script src="src/index.js">
-  </script>
-</body>
-
+    <script>
+      const front = document.getElementById('front')
+      const back = document.getElementById('back')
+      const btn = document.getElementById('flip-btn')
+      function handleFlip() {
+        front.classList.toggle('flipped')
+        back.classList.toggle('flipped')
+      }
+      btn.addEventListener('click', handleFlip)
+    </script>
+  </body>
 </html>
