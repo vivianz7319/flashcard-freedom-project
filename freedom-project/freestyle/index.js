@@ -1,3 +1,4 @@
+
 import "./styles.css";
 
 const front = document.getElementById('front')
